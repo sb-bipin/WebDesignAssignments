@@ -1,0 +1,22 @@
+/* External CSS – reusable/common styles */
+
+h2 {
+    color: #1e293b;
+}
+
+h3 {
+    color: #334155;
+}
+
+ol,
+ul {
+    padding-left: 20px;
+}
+
+a {
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0f172a;
+}

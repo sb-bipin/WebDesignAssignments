@@ -4,6 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Concepts</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: #1e293b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #about {
+            text-align: center;
+        }
+
+        #about img {
+            width: 150px;
+            border-radius: 50%;
+            margin: 15px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #e2e8f0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            padding: 10px;
+            background: #1e293b;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1e293b;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -11,84 +110,83 @@
     <header>
         <h1>My Portfolio</h1>
         <nav>
-            <a href="#about">About</a> |
-            <a href="#skills">Skills</a> |
-            <a href="#projects">Projects</a> |
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
-        <hr>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! My name is Bipin. This is my first portfolio webpage created using only HTML.</p>
-        <img src="./images.jpeg" alt="My Photo">
-        <p>Visit my portfolio website :
-            <a href="https://www.bipinpaudel.com.np" target="_blank">My Portfolio Website</a>
-        </p>
-    </section>
+    <div class="container">
 
-    <hr>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! My name is Bipin. This is my first portfolio webpage created using only HTML.</p>
+            <img src="./images.jpeg" alt="My Photo">
+            <p>
+                Visit my portfolio website:
+                <a href="https://www.bipinpaudel.com.np" target="_blank" style="color: #2563eb; font-weight: bold;">
+                    My Portfolio Website
+                </a>
+            </p>
+        </section>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-        <h3>Ordered List (Top Skills)</h3>
-        <ol>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Java</li>
-            <li>Problem Solving</li>
-        </ol>
+        <section id="skills">
+            <h2>My Skills</h2>
 
-        <h3>Unordered List (Hobbies)</h3>
-        <ul>
-            <li>Reading</li>
-            <li>Coding</li>
-            <li>Music</li>
-            <li>Gaming</li>
-        </ul>
-    </section>
+            <h3>Ordered List (Top Skills)</h3>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Problem Solving</li>
+            </ol>
 
-    <hr>
+            <h3>Unordered List (Hobbies)</h3>
+            <ul>
+                <li>Reading</li>
+                <li>Coding</li>
+                <li>Music</li>
+                <li>Gaming</li>
+            </ul>
+        </section>
 
-    <section id="projects">
-        <h2>Project Details</h2>
-        <table border="1" align="center" cellpadding="10">
-            <tr>
-                <th>Project</th>
-                <th>Technology</th>
-                <th>Status</th>
-            </tr>
-            <tr>
-                <td>Portfolio</td>
-                <td>HTML</td>
-                <td>Completed</td>
-            </tr>
-            <tr>
-                <td>Calculator</td>
-                <td>Java</td>
-                <td>In Progress</td>
-            </tr>
-        </table>
-    </section>
+        <section id="projects">
+            <h2>Project Details</h2>
+            <table>
+                <tr>
+                    <th>Project</th>
+                    <th>Technology</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Portfolio</td>
+                    <td>HTML</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>Calculator</td>
+                    <td>Java</td>
+                    <td>In Progress</td>
+                </tr>
+            </table>
+        </section>
 
-    <hr>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label>Name:</label>
+                <input type="text" name="name" required>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <label>Name:</label><br>
-            <input type="text" name="name" required><br><br>
+                <label>Email:</label>
+                <input type="email" name="email" required>
 
-            <label>Email:</label><br>
-            <input type="email" name="email" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
 
-            <input type="submit" value="Submit">
-        </form>
-    </section>
-
-    <hr>
+    </div>
 
     <footer>
         <p>&copy; 2025 My Portfolio | All Rights Reserved</p>
