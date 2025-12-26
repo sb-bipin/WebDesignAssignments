@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Game</title>
+</head>
+
+<body>
+
+    <h2>Select your choice :</h2>
+    <div>1.Rock</div>
+    <div> 2.Paper</div>
+    <div>3.Scissor</div>
+    <br>
+    <input id="game" type="text" />
+
+    <button onclick="CheckScore()">Check Score</button>
+    <br>
+    <br>
+    <strong>Score :</strong>
+    <p id="score"> </p>
+
+    <script>
+        function CheckScore() {
+            let possibilities = ['rock', 'paper', 'scissor'];
+            const randomIndex = Math.floor(Math.random() * possibilities.length);
+
+            let p1 = possibilities[randomIndex];
+            let p2 = document.getElementById('game').value;
+            let choosen = '';
+
+            switch (p2) {
+                case "1":
+                    choosen = 'rock';
+                    break;
+
+                case "2":
+                    choosen = 'paper';
+                    break;
+
+                case "3":
+                    choosen = 'scissor';
+                    break;
+
+                default:
+                    choosen = '';
+                    break;
+            }
+
+
+            if (p1 == 'rock' && choosen == 'scissor') {
+                document.getElementById('score').innerHTML = 'Computer wins.';
+            }
+            else if (p1 == 'rock' && choosen == 'rock') {
+                document.getElementById('score').innerHTML = 'Draw !!!';
+            }
+            else if (p1 == 'rock' && choosen == 'paper') {
+                document.getElementById('score').innerHTML = 'Hurray, You win the game.';
+            }
+            else if (p1 == 'paper' && choosen == 'scissor') {
+                document.getElementById('score').innerHTML = 'Computer wins.';
+            }
+            else if (p1 == 'paper' && choosen == 'rock') {
+                document.getElementById('score').innerHTML = 'Hurray, You win the game.';
+            }
+            else if (p1 == 'paper' && choosen == 'paper') {
+                document.getElementById('score').innerHTML = 'Draw !!!';
+            }
+            else if (p1 == 'scissor' && choosen == 'scissor') {
+                document.getElementById('score').innerHTML = 'Draw !!!';
+            }
+            else if (p1 == 'scissor' && choosen == 'rock') {
+                document.getElementById('score').innerHTML = 'Hurray, You win the game.';
+            }
+            else if (p1 == 'scissor' && choosen == 'paper') {
+                document.getElementById('score').innerHTML = 'Computer wins.';
+            }
+            else {
+                document.getElementById('score').innerHTML = 'Please choose value between (1-3) to predict score. ';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

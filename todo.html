@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Todo List</h1>
+    <hr>
+
+    <label>Todo Name:</label>
+    <input type="text" id="todo" />
+    <button onclick="addTodos()">Add</button>
+
+    <hr>
+
+    <ul id="todoList"></ul>
+
+    <script>
+        function addTodos() {
+            let todoInput = document.getElementById("todo");
+            let todoText = todoInput.value.trim();
+
+            if (todoText === "") {
+                alert("Please enter a todo!");
+                return;
+            }
+
+            let li = document.createElement("li");
+            li.innerHTML = `
+                ${todoText}
+                <button class="delete" onclick="deleteTodo(this)">X</button>
+            `;
+
+            document.getElementById("todoList").appendChild(li);
+            todoInput.value = "";
+        }
+
+        function deleteTodo(button) {
+            button.parentElement.remove();
+        }
+    </script>
+
+</body>
+
+</html>
