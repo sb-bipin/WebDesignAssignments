@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinque Terre</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            min-height: calc(100vh - 150px);
+        }
+
+        .sidebar {
+            background-color: #f0f0f0;
+            width: 200px;
+            padding: 20px;
+        }
+
+        .sidebar-item {
+            padding: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .main-content {
+            flex: 1;
+            background-color: white;
+            padding: 40px;
+        }
+
+        .main-content h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .main-content img {
+            width: 100%;
+            max-width: 625px;
+            height: auto;
+            display: block;
+        }
+
+        .info-box {
+            background-color: #add8e6;
+            padding: 30px;
+            width: 300px;
+        }
+
+        .info-box h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .info-box p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cinque Terre</h1>
+        <h2>Resize the browser window</h2>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-item">The Walk</div>
+            <div class="sidebar-item">Transport</div>
+            <div class="sidebar-item">History</div>
+            <div class="sidebar-item">Gallery</div>
+        </aside>
+
+        <main class="main-content">
+            <h2>The Walk</h2>
+            <p>The walk from Monterosso to Riomaggiore will take you approximately two hours, give or take an hour
+                depending on the weather conditions and your physical shape.</p>
+            <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="Cinque Terre coastal village">
+        </main>
+
+        <aside class="info-box">
+            <h3>What?</h3>
+            <p>Cinque Terre comprises five villages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore.</p>
+
+            <h3>Where?</h3>
+            <p>On the northwest cost of the Italian Riviera, north of the city La Spezia.</p>
+
+            <h3>Price?</h3>
+            <p>The Walk is free!</p>
+        </aside>
+    </div>
+</body>
+
+</html>
